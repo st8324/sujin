@@ -4,7 +4,7 @@ var swiperBegin = true;
 // 스와이퍼가 시작하는게 true, 스와이퍼가 진행중이면 false
 
 var startX,startY, endX,endY;
-console.log('test2');
+console.log('test3');
 $(function(){
 	
 	
@@ -15,7 +15,7 @@ $(function(){
   $(".section").on('touchend',function(event){
 		endX=event.originalEvent.changedTouches[0].screenX;
 	 	endY=event.originalEvent.changedTouches[0].screenY;
-   
+   	
 		var sectionPos = parseInt($(this).attr("data-index"));
 		console.log(sectionPos)
 		var pos;
@@ -25,7 +25,8 @@ $(function(){
 			if(pos!=-1)
 				$('.navLeft_tap').eq(pos).click();
 			console.log("위로"+pos)
-			return false;
+			
+			//return false;
 		}
 		else if(startY-endY>10){
 			$("html,body").stop().animate({scrollTop:sectionPos + win_h});
@@ -34,13 +35,14 @@ $(function(){
 			if(pos!=-1)
 				$('.navLeft_tap').eq(pos).click();
 			console.log("아래"+pos)
-			return false;
+			//return false;
 		}
 		else{
 			pos=getPosNow(sectionPos);
 			if(pos!=-1)
 				$('.navLeft_tap').eq(pos).click();
 		}
+		alert(endY +"," + startY);
   });
 
 	setTimeout(function(){
