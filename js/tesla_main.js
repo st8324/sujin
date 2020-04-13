@@ -4,7 +4,7 @@ var swiperBegin = true;
 // 스와이퍼가 시작하는게 true, 스와이퍼가 진행중이면 false
 
 var startX,startY, endX,endY;
-console.log('test6-2');
+console.log('test6-3');
 $(function(){
 	var swiper = new Swiper('.section-container', {
       direction: 'vertical'
