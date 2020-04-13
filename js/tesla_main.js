@@ -7,7 +7,16 @@ var startX,startY, endX,endY;
 console.log('test6-3');
 $(function(){
 	var swiper = new Swiper('.section-container', {
-      direction: 'vertical'
+		direction: 'vertical',
+		on : {
+			slideChange : function(){
+				if(swiper.activeIndex != 0){
+					$('.main_btn2').addClass('display_none')
+				}
+				else{
+					$('.main_btn2').removeClass('display_none')
+				}
+			}
     });
 	
   /*$(".section").on('touchstart',function(event){
