@@ -4,11 +4,13 @@ var swiperBegin = true;
 // 스와이퍼가 시작하는게 true, 스와이퍼가 진행중이면 false
 
 var startX,startY, endX,endY;
-console.log('test5');
+console.log('test6-1');
 $(function(){
+	var swiper = new Swiper('.section-container', {
+      direction: 'vertical'
+    });
 	
-	
-  $(".section").on('touchstart',function(event){
+  /*$(".section").on('touchstart',function(event){
 		startX = event.originalEvent.changedTouches[0].screenX;
 		startY = event.originalEvent.changedTouches[0].screenY;
   });
@@ -44,7 +46,7 @@ $(function(){
 		}
 //		alert(endY +"," + startY);
   });
-
+	*/
 	setTimeout(function(){
 	
 		$('.parallax-bg').animate({width:'210%','margin-left':'-54.5%'},1000,function(){
@@ -52,7 +54,6 @@ $(function(){
 			var swiper = new Swiper('.swiper-container', {
 				speed: 600,
 				parallax: true,
-				direction: 'vertical',
 				pagination: {
 					el: '.swiper-pagination',
 					clickable: true,
