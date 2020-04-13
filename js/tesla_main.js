@@ -4,7 +4,7 @@ var swiperBegin = true;
 // 스와이퍼가 시작하는게 true, 스와이퍼가 진행중이면 false
 
 var startX,startY, endX,endY;
-console.log('test3');
+console.log('test4');
 $(function(){
 	
 	
@@ -42,7 +42,7 @@ $(function(){
 			if(pos!=-1)
 				$('.navLeft_tap').eq(pos).click();
 		}
-		alert(endY +"," + startY);
+//		alert(endY +"," + startY);
   });
 
 	setTimeout(function(){
