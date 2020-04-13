@@ -16,8 +16,9 @@ $(function(){
 				else{
 					$('.main_btn2').removeClass('display_none')
 				}
-			}
-    });
+			
+		}
+	});
 	
   /*$(".section").on('touchstart',function(event){
 		startX = event.originalEvent.changedTouches[0].screenX;
