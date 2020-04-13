@@ -4,7 +4,7 @@ var swiperBegin = true;
 // 스와이퍼가 시작하는게 true, 스와이퍼가 진행중이면 false
 
 var startX,startY, endX,endY;
-console.log('test4');
+console.log('test5');
 $(function(){
 	
 	
@@ -52,6 +52,7 @@ $(function(){
 			var swiper = new Swiper('.swiper-container', {
 				speed: 600,
 				parallax: true,
+				direction: 'vertical',
 				pagination: {
 					el: '.swiper-pagination',
 					clickable: true,
