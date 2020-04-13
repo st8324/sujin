@@ -19,7 +19,7 @@ $(function(){
 		var sectionPos = parseInt($(this).attr("data-index"));
 		console.log(sectionPos)
 		var pos;
-		if(startY-endY>50){
+		if(startY-endY>10){
 			$("html,body").stop().animate({scrollTop:sectionPos - win_h});
 			pos=getPosNow(sectionPos - win_h);
 			if(pos!=-1)
@@ -27,7 +27,7 @@ $(function(){
 			console.log("위로"+pos)
 			return false;
 		}
-		else if(endY-startY>50){
+		else if(endY-startY>10){
 			$("html,body").stop().animate({scrollTop:sectionPos + win_h});
 			//navLeft_tap을 클릭하면 sectionPos + win_h 번째로 넘어감
 			pos=getPosNow(sectionPos + win_h);
